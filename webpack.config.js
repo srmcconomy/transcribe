@@ -23,7 +23,7 @@ module.exports = {
     filename: 'bundle.js',
     // the output bundle
 
-    path: resolve(__dirname, 'assets/static/js'),
+    path: resolve(__dirname, 'assets/js'),
 
     publicPath: '/'
     // necessary for HMR to know where to load the hot update chunks
@@ -35,7 +35,7 @@ module.exports = {
     hot: true,
     // enable HMR on the server
 
-    contentBase: resolve(__dirname, 'assets/static/js'),
+    contentBase: resolve(__dirname, 'assets/js'),
     // match the output path
 
     publicPath: '/',

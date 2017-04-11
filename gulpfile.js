@@ -139,7 +139,7 @@ gulp.task('build:client:prod', callback => {
     if (err) throw new gutil.PluginError('build:client:prod', err);
 
     // Emulate gulp-size
-    const outputConfig = webpackProdConfig.output;
+    const outputConfig = webpackConfig.output;
     const jsFilePath = path.join(outputConfig.path, outputConfig.filename);
     gutil.log(`'${gutil.colors.cyan('Client Prod JS')}' ${gutil.colors.green('all files ')}` +
               `${gutil.colors.magenta(pretty(fs.statSync(jsFilePath).size))}`);

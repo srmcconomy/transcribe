@@ -138,7 +138,6 @@ app.use((req, res) => {
   <html lang="en">
     <head>
       <meta charset="utf-8">
-      <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
       <title>Transcribe Twitch</title>
     </head>
     <body>
