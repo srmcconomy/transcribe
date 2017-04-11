@@ -14,7 +14,7 @@ export default class Transcription extends Component {
   }
 
   componentDidMount() {
-    const ws = new WebSocket('ws://transcribe.prettybigjoe.me');
+    const ws = new WebSocket('ws://transcribe.prettybigjoe.me:8088');
     ws.onopen = () => ws.send(JSON.stringify({ type: 'load', stream: this.props.stream }));
     ws.onmessage = data => {
       const newData = this.state.data;
