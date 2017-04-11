@@ -1,0 +1,101 @@
+.create-match-modal {
+  align-items: center;
+  background: $grey3;
+  border-radius: .3vh;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, .3), 0 15px 12px rgba(0, 0, 0, .22);
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  font-size: 2vh;
+  padding: 2vh 4vh 4vh;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .colours-container {
+    display: flex;
+    justify-content: space-between;
+    line-height: 5vh;
+    margin: 1vh 0;
+  }
+
+  label {
+    display: inline-block;
+    line-height: 6vh;
+  }
+
+  input {
+    float: right;
+    font-size: inherit;
+    margin: 1vh;
+    width: 30vh;
+  }
+
+  .colours {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .colour {
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 5vh;
+    justify-content: center;
+    width: 5vh;
+
+    &.checked {
+      background: $grey1;
+    }
+
+    .inner {
+      border-radius: 50%;
+      height: 3vh;
+      width: 3vh;
+    }
+
+    &.red .inner {
+      background: $red;
+    }
+
+    &.orange .inner {
+      background: $orange;
+    }
+
+    &.yellow .inner {
+      background: $yellow;
+    }
+
+    &.green .inner {
+      background: $green;
+    }
+
+    &.blue .inner {
+      background: $blue;
+    }
+
+    &.purple .inner {
+      background: $purple;
+    }
+  }
+
+  button {
+    font-size: 2.5vh;
+    line-height: 4.5vh;
+    margin-top: 5vh;
+    padding: 0 1vh;
+    text-align: center;
+    width: 23vh;
+  }
+
+  .title {
+    color: $white;
+    font-size: 2.5vh;
+    padding: 1vh;
+    text-align: center;
+  }
+}

@@ -1,0 +1,47 @@
+.match {
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  font-family: 'FOT-Chiaro Std';
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.left-bar {
+  background: #212121;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 39vh;
+}
+
+.right-bar {
+  width: 30vh;
+}
+
+.middle-bar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.fill {
+  flex: 1;
+  position: relative;
+}
+
+.scroll {
+  overflow: scroll;
+}
+
+.protip {
+  bottom: 1vh;
+  color: rgba($white, .8);
+  font-size: 1.5vh;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 11;
+}

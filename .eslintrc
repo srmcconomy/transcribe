@@ -1,0 +1,51 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "env": {
+    "mocha": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["import"],
+  "globals": {
+    "__SERVER__": true,
+    "__CLIENT__": true
+  },
+  "settings": {
+    "import/ignore": ["node_modules", "config.js"],
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+  "rules": {
+    "comma-dangle": 2,
+    "react/prop-types": 0,
+    "import/no-unresolved": 2,
+    "import/named": 2,
+    "import/namespace": 2,
+    "import/default": 2,
+    "import/export": 2,
+    "import/no-duplicates": 2,
+    "import/imports-first": 2,
+    "react/sort-comp": [1, {
+      order: [
+        'type-annotations',
+        'static-methods',
+        'lifecycle',
+        'everything-else',
+        'render',
+      ],
+    }],
+    "jsx-a11y/no-static-element-interactions": 0,
+    react/prefer-stateless-function: 0,
+    arrow-parens: 0,
+    no-plusplus: 0,
+    no-duplicate-imports: 0
+  }
+}

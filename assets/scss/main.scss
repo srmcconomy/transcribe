@@ -1,0 +1,154 @@
+@import 'colours';
+
+@font-face {
+  font-family: 'FOT-Chiaro Std';
+  src: url('/fonts/FOT-ChiaroStd-B_0.otf');
+}
+
+@font-face {
+  font-family: 'Triforce';
+  src: url('/fonts/Triforce.ttf');
+}
+
+body {
+  background: $grey2;
+  font-family: 'FOT-Chiaro Std';
+  margin: 0;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-spaced {
+  justify-content: space-around;
+}
+
+a, button {
+  background: $grey4;
+  border: 0;
+  border-radius: .2vh;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  color: $white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.5vh;
+  margin: .5vh;
+  padding: 0 1vh;
+  text-decoration: inherit;
+  transform: perspective(100px);
+  transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+  white-space: nowrap;
+
+  .icon {
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin: 0 .5vh;
+    vertical-align: middle;
+  }
+
+  .label {
+    font-size: 1.5vh;
+    vertical-align: middle;
+  }
+
+  &.primary {
+    background: $gold;
+  }
+
+  &:not(:disabled):hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+    transform: perspective(100px) translateZ(2px);
+  }
+
+  &:disabled {
+    color: rgba(255, 255, 255, .5);
+  }
+}
+
+.skull-image-container {
+  height: 9.2vh;
+  position: relative;
+  width: 12.2vh;
+}
+
+.skull-type {
+  font-size: 1.5vh;
+  left: .5vh;
+  position: absolute;
+}
+
+.skull-image {
+  background-size: cover;
+  border: .1vh solid $black;
+  height: 9vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: .2s ease-in-out;
+  width: 12vh;
+  z-index: 1;
+
+  &:hover {
+    height: 18vh;
+    left: -6vh;
+    top: -4.5vh;
+    width: 24vh;
+    z-index: 2;
+  }
+
+  &.red {
+    border-color: $red;
+  }
+
+  &.orange {
+    border-color: $orange;
+  }
+
+  &.yellow {
+    border-color: $yellow;
+  }
+
+  &.green {
+    border-color: $green;
+  }
+
+  &.blue {
+    border-color: $blue;
+  }
+
+  &.purple {
+    border-color: $purple;
+  }
+}
+
+input {
+  &[type='text'],
+  &[type='password'] {
+    border: none;
+    border-radius: 1px;
+    font-family: inherit;
+    outline: none;
+    padding: 0 10px;
+  }
+}
+
+@import 'App';
+@import 'Watch';
+@import 'MatchList';
+@import 'SkulltulaMap';
+@import 'AreaList';
+@import 'Match';
+@import 'Modal';
+@import 'AreaModal';
+@import 'CreateMatchModal';
+@import 'JoinMatchModal';
+@import 'Queue';
+@import 'ScrollArea';
+@import 'Scoreboard';

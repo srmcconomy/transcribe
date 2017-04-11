@@ -1,0 +1,39 @@
+.app {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 80%;
+    margin-bottom: 2vh;
+
+    .create-match {
+      font-size: 2vh;
+    }
+  }
+
+  .main-title {
+    margin: 2vh 0;
+    position: relative;
+    .main {
+      color: $white;
+      font-family: Triforce;
+      font-size: 15vh;
+    }
+
+    .sub {
+      position: absolute;
+      color: $white;
+      bottom: 0;
+      left: 10vh;
+      font-size: 2vh;
+      line-height: 2vh;
+    }
+  }
+}

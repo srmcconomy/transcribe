@@ -1,0 +1,79 @@
+.match-list {
+  background: $grey1;
+  flex: 1;
+
+  .match-item {
+    background: $grey2;
+    border-radius: 1vh;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    height: 12vh;
+    margin: 1vh;
+    padding: 1vh;
+
+    .name {
+      font-size: 3vh;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 20vh;
+    }
+
+    .entrants-container {
+      flex: 1;
+      margin: 0 5vh;
+    }
+
+    .entrants {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      font-size: 2vh;
+      height: 100%;
+    }
+
+    .entrant {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      width: 50%;
+    }
+
+    .player-name {
+      white-space: nowrap;
+    }
+
+    .colour {
+      border-radius: 50%;
+      flex: none;
+      height: 2vh;
+      margin: 1vh;
+      width: 2vh;
+
+      &.red {
+        background: $red;
+      }
+
+      &.orange {
+        background: $orange;
+      }
+
+      &.yellow {
+        background: $yellow;
+      }
+
+      &.green {
+        background: $green;
+      }
+
+      &.blue {
+        background: $blue;
+      }
+
+      &.purple {
+        background: $purple;
+      }
+    }
+  }
+}

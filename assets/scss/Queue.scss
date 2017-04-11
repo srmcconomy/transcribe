@@ -1,0 +1,56 @@
+.queue {
+  position: relative;
+}
+
+.queue-item {
+  padding: 1vh;
+  position: absolute;
+  transition: 200ms ease-in-out;
+  width: 100%;
+
+  .move-buttons {
+    justify-content: space-between;
+    margin: .5vh;
+  }
+
+  .move-button {
+    line-height: 2.2vh;
+    margin: 0;
+    width: 8vh;
+  }
+
+  .button-area {
+    margin-left: 1vh;
+  }
+
+  .primary {
+    width: 14.5vh;
+  }
+
+  img {
+    height: 9vh;
+    width: 12vh;
+  }
+
+  .area {
+    font-size: 2vh;
+    line-height: 2.5vh;
+  }
+
+  .claim-button {
+    width: 15vh;
+  }
+
+  .remove-button {
+    border-radius: 50%;
+    font-size: 1.5vh;
+    height: 2vh;
+    line-height: 2vh;
+    padding: 0;
+    position: absolute;
+    right: 1vh;
+    text-align: center;
+    top: 1vh;
+    width: 2vh;
+  }
+}

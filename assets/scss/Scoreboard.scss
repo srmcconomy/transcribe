@@ -1,0 +1,80 @@
+.scoreboard {
+  .score-entry {
+    align-items: center;
+    line-height: 4vh;
+
+    .colour {
+      border: .1vh black solid;
+      border-radius: 50%;
+      height: 2vh;
+      width: 2vh;
+
+      &.remaining {
+        background: grey;
+      }
+
+      &.red {
+        background: $red;
+      }
+
+      &.orange {
+        background: $orange;
+      }
+
+      &.yellow {
+        background: $yellow;
+      }
+
+      &.green {
+        background: $green;
+      }
+
+      &.blue {
+        background: $blue;
+      }
+
+      &.purple {
+        background: $purple;
+      }
+    }
+
+    .name {
+      flex: 1;
+      font-size: 2.5vh;
+      margin: 0 1vh;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 15vh;
+    }
+
+    .score {
+      font-size: 2.5vh;
+      margin-left: 2vh;
+    }
+  }
+}
+
+.abs.scoreboard {
+  color: white;
+  width: 90%;
+
+  .score-entry {
+    line-height: 40px;
+
+    .colour {
+      height: 20px;
+      width: 20px;
+    }
+
+    .name {
+      font-size: 20px;
+      margin: 0 10px;
+    }
+
+    .score {
+      font-size: 20px;
+      margin-left: 20px;
+    }
+  }
+}
