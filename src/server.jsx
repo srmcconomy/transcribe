@@ -120,7 +120,9 @@ wss.on('connection', ws => {
   });
 });
 
-server.listen(process.env.PORT || config.ports.express);
+server.listen(process.env.PORT || config.ports.express, () => {
+  console.log('listening on port ' + process.env.PORT || config.ports.express);
+});
 
 app.use('/assets', express.static(
   path.join(__dirname, 'static')
