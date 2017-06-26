@@ -19,24 +19,28 @@ const speech = require('@google-cloud/speech')({
 var request = {
   config: {
     encoding: 'LINEAR16',
-    sampleRate: 36000
+    sampleRate: 36000,
   },
   singleUtterance: false,
-  interimResults: false
+  interimResults: true
 };
 
-function setup(stream, name) {
+function setup(stream, name, depth = 0) {
   console.log('setup')
   stream.pipe(speech.createRecognizeStream(request))
-    .on('close', () => setup(stream, name))
+    .on('close', () => setup(stream, name, depth + 1))
     .on('error', error => console.log('!!' + error))
     .on('data', data => {
       if (data.results.length > 0 && streams.has(name)) {
-        streams.get(name).sockets.forEach(ws => ws.send(data.results));
+        console.log(data);
+        streams.get(name).sockets.forEach(ws => ws.send(JSON.stringify({
+          text: data.results,
+          i0: depth,
+          i1: data.resultIndex,
+        })));
       }
     });
 }
-
 
 const app = express();
 const server = http.Server(app);
@@ -53,12 +57,12 @@ function setupStream(stream) {
   if (nextPort === 4000) nextPort = 3001;
   streams.get(stream).port = port
   streams.get(stream).process = spawn(
-    'streamlink', 
+    'streamlink',
     [
-      `twitch.tv/${stream}`,  
-      'audio_only', 
-      '--player-external-http', 
-      '--player-external-http-port', 
+      `twitch.tv/${stream}`,
+      'audio_only',
+      '--player-external-http',
+      '--player-external-http-port',
       `${port}`,
     ]
   );
@@ -76,7 +80,7 @@ function setupStream(stream) {
     }
   })
   // streams.get(stream).process.stderr.on('data', data => console.log(data))
-  // 
+  //
 }
 
 function stopStream(stream) {
